@@ -1,4 +1,4 @@
-package com.example.deMau1;
+package com.example.deMau1.controller;
 
 public class tinhTong {
     public int tinhTong (int a, int b){ // khai báo biến thực hiện test (tinhTong), khai báo các biến dữ liệu thực hiện test(a,b)

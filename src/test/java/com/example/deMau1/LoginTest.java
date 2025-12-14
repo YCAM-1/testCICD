@@ -17,14 +17,14 @@ public class LoginTest {
     public void testRegister() throws InterruptedException{
         driver.get("https://vitimex.com.vn/account/register"); // lay domain dan vao web
         Thread.sleep(5000); // thoi gian doi thuc hien thao tac tiep theo
-        driver.findElement(By.id("last_name")).sendKeys("Huong"); // lay id ben trang web cua css ( kiem tra trang hoac bam f12), sendKeys la de nhap gia tri tu dong vao trong trang web
-        driver.findElement(By.id("first_name")).sendKeys("Giang");
-        driver.findElement(By.id("radio1")).click(); // click() la thao tac bam chon hoac tich khi khong phai dien gia tri text hoac number
-        driver.findElement(By.id("birthday")).sendKeys("02/16/2008");
-        driver.findElement(By.id("email")).sendKeys("giangthth005801@gmail.com");
-        driver.findElement(By.id("password")).sendKeys("123456");
-        driver.findElement(By.cssSelector("input[type='submit'][value='Đăng ký']")).click(); // neu co id thi dung id (dep troi), neu khong thi dung cssSelector ( chui giao vien, an diem thap, feedback giao vien te bla bla, up ghi chu linh ta linh tinh)
-        Thread.sleep(5000);
+        driver.findElement(By.id("last_name")).sendKeys("Bao");
+        driver.findElement(By.id("first_name")).sendKeys("Quoc");
+        driver.findElement(By.id("radio1")).click();
+        driver.findElement(By.id("birthday")).sendKeys("01/01/2008");
+        driver.findElement(By.id("email")).sendKeys("abc@gmail.com");
+        driver.findElement(By.id("password")).sendKeys("123123");
+        driver.findElement(By.cssSelector("input[type = 'submit'][value='Đăng ký']")).click();
+        Thread.sleep(3000);
     }
     @Test
     public void testLogin() throws InterruptedException{
@@ -43,6 +43,13 @@ public class LoginTest {
         driver.findElement(By.id("inputSearchAuto")).sendKeys("Quần");
         driver.findElement(By.id("search-header-btn")).click();
         Thread.sleep(5000);
+    }
+    @Test
+    public void testDatBanh() throws InterruptedException{
+        driver.get("https://www.savor.vn/?viewId=banh-giang-sinh");
+        Thread.sleep(3000);
+        driver.findElement(By.className("items-center flex flex-row gap-2 p-2")).click();
+        Thread.sleep(3000);
     }
 }
 

@@ -1,5 +1,6 @@
 package com.example.deMau1;
 
+import com.example.deMau1.controller.tinhTong;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
